@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ruleset name="becommerce">
+    <rule ref="WebimpressCodingStandard.WhiteSpace.ScopeIndent">
+        <properties>
+            <!-- causes weird indentation, indents should always be a multiple of 4 -->
+            <property name="alignObjectOperators" value="false"/>
+        </properties>
+    </rule>
+
+    <rule ref="WebimpressCodingStandard">
+        <!-- use statements should be ordered by their purpose -->
+        <exclude name="WebimpressCodingStandard.Namespaces.AlphabeticallySortedUses.IncorrectOrder" />
+
+        <!-- methods such as json_decode throw an exception which is not picked up as a valid exception -->
+        <exclude name="WebimpressCodingStandard.Functions.Throws.AdditionalThrowTag" />
+
+        <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidTypeFormat" />
+
+        <!-- no spaces before colon when declaring the return type of a method -->
+        <exclude name="WebimpressCodingStandard.Formatting.ReturnType.SpacesBeforeColon" />
+
+        <!-- allow type declaration in class properties -->
+        <exclude name="WebimpressCodingStandard.Commenting.VariableComment.RedundantVarDoc" />
+
+        <!-- allow inheritdoc tags -->
+        <exclude name="WebimpressCodingStandard.Commenting.DocComment.InheritDocTag" />
+        <exclude name="WebimpressCodingStandard.Commenting.FunctionDisallowedTag.InheritDocTagNotAllowed" />
+
+        <!-- sometimes you need to add a @mixin for phpStorm, this conflicts with that as technically the statement is unused -->
+        <exclude name="WebimpressCodingStandard.Namespaces.UnusedUseStatement.UnusedUse" />
+    </rule>
+</ruleset>

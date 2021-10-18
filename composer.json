@@ -1,0 +1,45 @@
+{
+    "name": "larapkg/testing",
+    "description": "Testing and code standards module",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LaraPKG\\Testing\\": "src/"
+        }
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Paul Dawson",
+            "email": "paul.dawson@becommerce.shop"
+        },
+        {
+            "name": "Ron Appleton",
+            "email": "ron.appleton@becommerce.shop"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "laravel/framework": "^8.49",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.8",
+        "psalm/plugin-laravel": "^1.5",
+        "nunomaduro/larastan": "^0.7.12",
+        "phpstan/phpstan": "^0.12.99",
+        "webimpress/coding-standard": "^1.2",
+        "phpmd/phpmd": "^2.10",
+        "phploc/phploc": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.18",
+        "facade/ignition": "^2.10",
+        "roave/security-advisories": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "testing": "./testing"
+    },
+    "bin": ["testing"]
+}
